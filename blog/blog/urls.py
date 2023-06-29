@@ -16,9 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from apps.noticias import views
+# from apps.noticias import views
+from . import views
 
 urlpatterns = [
-    path('', views.inicio, name="inicio"),
+    # path('', views.inicio, name="inicio"),
     path('admin/', admin.site.urls),
+    #path para la url de la vista de home
+    path('', views.home, name='home'),
+    
 ]
