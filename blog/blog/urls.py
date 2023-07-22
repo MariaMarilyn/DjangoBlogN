@@ -26,3 +26,13 @@ urlpatterns = [
     path('', views.home, name='home'),
     
 ]
+from django.urls import path, include
+
+urlpatterns = [
+    path('noticias/', include('noticias.urls')),
+    # Otras URLS para las secciones adicionales
+    # path('inicio/', include('inicio.urls')),
+    # path('categorias/', include('categorias.urls')),
+    # path('acerca_de/', include('acerca_de.urls')),
+    # path('contacto/', include('contacto.urls')),
+]
