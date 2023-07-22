@@ -1,0 +1,15 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Noticias</title>
+</head>
+<body>
+    <h1>Lista de Noticias</h1>
+    <ul>
+        {% for noticia in noticias %}
+        <li><a href="{% url 'ver_noticia' noticia.id %}">{{ noticia.titulo }}</a> - {{ noticia.fecha_publicacion }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
